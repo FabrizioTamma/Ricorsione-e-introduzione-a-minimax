@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	function sommaprimiN(N) {
+  let somma = 0;
+  for (let i = 1; i <= N; i++) {
+    somma += i;
+  }
+  return somma;
+}
+
+console.log(sommaprimiN(12))
+
+function sommaNricorsivo(N) {
+  if (N === 1) {
+    return N;
+  }
+  return N + sommaNricorsivo(N - 1);
+}
+
+console.log(sommaNricorsivo(12))
+</script>
+</body>
+</html>

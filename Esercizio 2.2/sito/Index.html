@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	function moltiplicaArray(arr) {
+  let prodotto = 1;
+  for (let i = 0; i < arr.length; i++) {
+    prodotto *= arr[i];
+  }
+  return prodotto;
+}
+console.log(moltiplicaArray)
+
+function moltiplicaArray_ric(arr, startIndex = 0) {
+  if (startIndex === arr.length - 1) {
+    return arr[startIndex];
+  }
+  return arr[startIndex] * moltiplicaArray_ric(arr, startIndex + 1);
+}
+console.log(moltiplicaArray_ric)
+
+</script>
+</body>
+</html>

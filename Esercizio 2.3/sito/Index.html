@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+  function Palindromo(str) {
+  for (let i = 0; i < str.length / 2; i++) {
+    if (str[i] !== str[str.length - 1 - i]) {
+      return false;
+    }
+  }
+  return true;
+}
+console.log(Palindromo())
+
+  function Palindromo_ric(str, startIndex = 0) {
+  const endIndex = str.length - 1 - startIndex;
+  if (startIndex >= endIndex) {
+    return true;
+  }
+  if (str[startIndex] !== str[endIndex]) {
+    return false;
+  }
+  return Palindromo_ric(str, startIndex + 1);
+}
+</script>
+</body>
+</html>
