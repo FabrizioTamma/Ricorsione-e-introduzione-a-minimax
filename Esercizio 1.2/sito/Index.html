@@ -7,31 +7,26 @@
 </head>
 <body>
 <script type="text/javascript">
-	function ElementoMinore(elenco) {
-  let minore = elenco[0];
-  for (let i = 1; i < elenco.length; i++) {
-    if (elenco[i] < minore) {
-      minore = elenco[i];
-    }
+	
+
+  let array = [6, 4, 9, 10, 25, 1]
+
+function ElementoMin(arr, Min) {
+  
+  if ( array.length ===1) {
+    return Math.min(Min,array[0]);
+  }else{
+      let lastElement = array.pop()
+      if(lastElement < Min){
+        Min = lastElement
+      }
+      return ElementoMin(array, Min);
   }
-  return minore;
+    
 }
+    console.log(ElementoMin(array, Infinity))
 
-console.log(ElementoMinore(elenco))
 
-function ElementoMin(arr, startIndex = 0) {
-  const Min = startIndex;
-  if (startIndex === arr.length - 1) {
-    return arr[Min];
-  }
-  const ElementoMinInRest = ElementoMin(arr, startIndex + 1);
-  if (arr[Min] < ElementoMinInRest) {
-    return arr[Min];
-  }
-  return ElementoMinInRest;
-}
-
-console.log(ElementoMin())
 </script>
 </body>
 </html>

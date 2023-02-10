@@ -17,14 +17,15 @@
 
 console.log(sommaprimiN(12))
 
-function sommaNricorsivo(N) {
+function sommaN_ricorsivo(N) {
   if (N === 1) {
-    return N;
+    return ;
+  }else{
+    return sommaN_ricorsivo(N - 1) + N;  
   }
-  return N + sommaNricorsivo(N - 1);
 }
 
-console.log(sommaNricorsivo(12))
+console.log(sommaN_ricorsivo(12))
 </script>
 </body>
 </html>
