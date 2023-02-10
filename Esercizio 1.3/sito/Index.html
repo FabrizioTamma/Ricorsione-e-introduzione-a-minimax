@@ -7,6 +7,8 @@
 </head>
 <body>
 <script type="text/javascript">
+
+/*
 function ElementoMaggiore(elenco) {
   let Maggiore = elenco[0];
   for (let i = 1; i < elenco.length; i++) {
@@ -17,19 +19,26 @@ function ElementoMaggiore(elenco) {
   return Maggiore;
 }
 console.log(ElementoMaggiore())
+*/
 
-function ElementoMag(arr, startIndex = 0) {
-  const Mag = startIndex;
-  if (startIndex === arr.length - 1) {
-    return arr[Mag];
+
+     let array = [19, 14, 16, 3, 4, 2]
+
+function ElementoMax_ric(array, Max) {
+  
+  if ( array.length === 1) {
+    return Math.max(Max,array[0]);
+  }else{
+      let lastElement = array.pop()
+      if(lastElement > Max){
+        Max = lastElement
+      }
+      return ElementoMax_ric(array, Max);
   }
-  const ElementoMagInRest = ElementoMag(arr, startIndex + 1);
-  if (arr[Mag] > ElementoMagInRest) {
-    return arr[Mag];
+ 
   }
-  return ElementoMagInRest;
-}
-console.log(ElementoMag())
+    console.log(ElementoMax_ric(array, -Infinity))
+
 </script>
 </body>
 </html>
