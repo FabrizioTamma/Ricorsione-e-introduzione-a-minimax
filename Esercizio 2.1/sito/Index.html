@@ -7,7 +7,8 @@
 </head>
 <body>
 <script type="text/javascript">
-	function sommaArray(arr) {
+	
+  /*function sommaArray(arr) {
   let somma = 0;
   for (let i = 0; i < arr.length; i++) {
     somma += arr[i];
@@ -15,14 +16,19 @@
   return somma;
 }
 console.log(sommaArray(5))
+  */
 
-	function sommaArray_ric(arr, startIndex = 0) {
-  if (startIndex === arr.length - 1) {
-    return arr[startIndex];
+    let array = [15, 16, 1, 4, 8]
+    let somma = 0
+	function sommaArray_ric(array, somma) {
+  if(array.length < 1){
+    return somma
+  }else{
+     return somma + array[0] + sommaArray_ric(array.slice(1), somma)
   }
-  return arr[startIndex] + sommaArray_ric(arr, startIndex + 1);
 }
-console.log(sommaArray_ric)
+console.log(sommaArray_ric(array, somma))
+
 </script>
 </body>
 </html>
