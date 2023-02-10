@@ -17,15 +17,20 @@
 
 console.log(sommaprimiN(12))
 
-function sommaN_ricorsivo(N) {
+function sommaNricorsivo(N) {
   if (N === 1) {
+<<<<<<< HEAD
     return 1;
   }else{
     return sommaN_ricorsivo(N - 1) + N;  
+=======
+    return N;
+>>>>>>> parent of 3fd46a2 (1.1)
   }
+  return N + sommaNricorsivo(N - 1);
 }
 
-console.log(sommaN_ricorsivo(12))
+console.log(sommaNricorsivo(12))
 </script>
 </body>
 </html>

@@ -7,7 +7,7 @@
 </head>
 <body>
 <script type="text/javascript">
-	function ElementoMinore(elenco) {
+	/*function ElementoMinore(elenco) {
   let minore = elenco[0];
   for (let i = 1; i < elenco.length; i++) {
     if (elenco[i] < minore) {
@@ -18,6 +18,8 @@
 }
 
 console.log(ElementoMinore(elenco))
+*/
+
 
 function ElementoMin(arr, Min) {
   
@@ -30,13 +32,8 @@ function ElementoMin(arr, Min) {
       }
       return ElementoMin(array, Min);
   }
-  const ElementoMinInRest = ElementoMin(arr, startIndex + 1);
-  if (arr[Min] < ElementoMinInRest) {
-    return arr[Min];
+ 
   }
-  return ElementoMinInRest;
-    
-}
     console.log(ElementoMin(array, Infinity))
 </script>
 </body>
